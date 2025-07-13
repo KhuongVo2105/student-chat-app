@@ -6,7 +6,7 @@ import React from "react";
 const SignIn = () => {
   const t = useTranslations("login");
 
-  const handleGoogleLogin = () => {};
+  const handleGoogleLogin = () => {alert('click')};
 
   return (
     <>
@@ -16,7 +16,7 @@ const SignIn = () => {
       <div className="flex justify-center space-x-4 mb-4">
         <button
           onClick={handleGoogleLogin}
-          className="text-white rounded-full w-10"
+          className="text-white rounded-full w-10 cursor-pointer"
         >
           <Image
             src={"/socials/googleBtn.png"}
@@ -25,7 +25,7 @@ const SignIn = () => {
             height={50}
           />
         </button>
-        <button className="text-white rounded-full w-10">
+        <button className="text-white rounded-full w-10 cursor-not-allowed">
           <Image
             src={"/socials/facebookBtn.png"}
             alt="google logo"
@@ -33,7 +33,7 @@ const SignIn = () => {
             height={50}
           />
         </button>
-        <button className="text-white rounded-full w-10">
+        <button className="text-white rounded-full w-10 cursor-not-allowed">
           <Image
             src={"/socials/appleBtn.png"}
             alt="google logo"
