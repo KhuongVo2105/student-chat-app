@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { dir } from "i18next";
 import { Geist, Geist_Mono } from "next/font/google";
 
-import "../globals.css";
+import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Student Chat App",
@@ -19,21 +18,17 @@ const geistMono = Geist_Mono({
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
 }: {
   children: React.ReactNode;
-  params: { locale: string };
 }) {
-  const message = await getMessages({locale});
+  const locale = await getLocale();
 
   return (
-    <html lang={locale} dir={dir(locale)}>
+    <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NextIntlClientProvider messages={message}>
-          {children}
-        </NextIntlClientProvider>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
   );

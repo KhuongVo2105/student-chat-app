@@ -1,0 +1,12 @@
+{
+  "login": {
+    "title": "Giải phóng các cuộc trò chuyện AnyChat",
+    "note": "Để tiếp tục, vui lòng đăng nhập bằng tài khoản của bạn",
+    "login-button": "Đăng nhập",
+    "signup-button": "Đăng ký",
+    "already-have-account": "Đã có tài khoản?",
+    "continue-button": "Tiếp tục",
+    "not-have-account": "Chưa có tài khoản?",
+    "create-account-button": "Tạo tài khoản"
+  }
+}
